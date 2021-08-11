@@ -1,0 +1,10 @@
+h1 {
+  align-content: center;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.title {
+  text-decoration: underline;
+  font-size: 5rem;
+}
