@@ -4,7 +4,7 @@ const List = (props) => {
   const { listItems } = props;
 
   const onClickHandler = (e) => {
-    console.log(e.target.innerHTML);
+    // e.target.innerHTML = `✅`;
   };
 
   return (
