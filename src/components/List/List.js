@@ -1,20 +1,19 @@
-import './List.css';
+import "./List.css";
+import ListItem from "./ListItem/ListItem";
 
 const List = (props) => {
-  const { listItems } = props;
-
-  const onClickHandler = (e) => {
-    // e.target.innerHTML = `✅`;
-  };
+  const { listItems, onCompleted } = props;
 
   return (
     <div>
       {listItems.map((item) => (
-        <div>
-          <button className="todoItem" key={item.key} onClick={onClickHandler}>
-            {`${item.isComplete ? '✅' : '⬜'} ${item.title}`}
-          </button>
-        </div>
+        <ListItem
+          item={item}
+          key={item.key}
+          isComplete={item.isComplete}
+          onCompleted={onCompleted}
+          className={"ListItem"}
+        />
       ))}
     </div>
   );
